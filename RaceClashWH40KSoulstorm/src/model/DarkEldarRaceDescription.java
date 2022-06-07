@@ -18,8 +18,8 @@ public class DarkEldarRaceDescription {
 	public DarkEldarRaceDescription() 
 	{
 
-		generalDescription = "The Drukhari, also known to outsiders as the Dark Eldar, are a forsaken and corrupt Aeldari kindred, the sadistic, malicious counterparts of the Asuryani. Like their cousins of the craftworlds, the Drukhari are an ancient and highly advanced alien race of fey humanoids.  ";
-		capital = "Commorragh ";
+		generalDescription = " The Drukhari are an ancient and highly advanced alien race of fey humanoids.  ";
+		capital = " Commorragh ";
 		mainStrengths = "speed, technology";
 		mainWeakness = "few in numbers";
 
@@ -68,7 +68,7 @@ public class DarkEldarRaceDescription {
 	}
 	
 	/**
-	 * Returns the Capital
+	 * Returns the mainWeakness
 	 * 
 	 * @return mainWeakness the main wekaness that the race has
 	 * 
@@ -93,14 +93,6 @@ public class DarkEldarRaceDescription {
 		return "DarkEldarRaceDescription [generalDescription=" + generalDescription + ", capital=" + capital
 				+ ", mainStrengths=" + mainStrengths + ", mainWeakness=" + mainWeakness + "]";
 	}
-	
-	
-
-
-
-
-
-
 
 }
 

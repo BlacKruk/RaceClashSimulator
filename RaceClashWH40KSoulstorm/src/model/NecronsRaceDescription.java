@@ -23,8 +23,8 @@ public class NecronsRaceDescription {
 	public NecronsRaceDescription() 
 	{
 
-		generalDescription = "The Necrons are a mysterious xenos species of humanoid, robotic skeletal warriors that have lain dormant in their stasis-tombs for more than 60 million Terran years, though they have begun to awaken at last. "
-				+ "They are the soulless creations and former servants of the ancient C'tan, the terrible Star Gods of Aeldari myth. ";
+		generalDescription = "The Necrons are a mysterious xenos species of humanoid, robotic skeletal warriors that have lain dormant in their"
+				+ " stasis-tombs for more than 60 million Terran years, though they have begun to awaken at last. ";
 		capital = "Hollow Sun";
 		mainStrengths = "resilience, strength";
 		mainWeakness = "speed";
@@ -53,8 +53,6 @@ public class NecronsRaceDescription {
 	 * 
 	 * */
 
-
-
 	public String getCapital() {
 
 
@@ -68,7 +66,6 @@ public class NecronsRaceDescription {
 	 * 
 	 * */
 
-
 	public String getMainStrengths() {
 
 
@@ -76,7 +73,7 @@ public class NecronsRaceDescription {
 	}
 
 	/**
-	 * Returns the Capital
+	 * Returns the mainWeakness
 	 * 
 	 * @return return the main weakness that the race has
 	 * 

@@ -31,8 +31,7 @@ public class NecronsInfantryUnits implements Comparable<NecronsInfantryUnits>   
      * @param newSetOfNames the names of the units
      * @param overallScore the OverallScore for the whole race
      * */
-
-
+	
 	//custom constructor
 	public NecronsInfantryUnits(NecronsInfantryAbilities newSetOfAbilities,NecronsInfantryNames newSetOfNames, int overallScore) {
 
@@ -40,11 +39,7 @@ public class NecronsInfantryUnits implements Comparable<NecronsInfantryUnits>   
 		this.newSetOfAbilities = newSetOfAbilities;
 		this.newSetOfNames = newSetOfNames;
 		this.overallScore = overallScore;
-
-
 	}
-
-
 
 	//get and set methods
 	
@@ -92,9 +87,9 @@ public class NecronsInfantryUnits implements Comparable<NecronsInfantryUnits>   
 	}
 	
 	/**
-	 * Sets the  Necrons Infantry Names , to a value chosen by the user
+	 * Sets the  NecronsInfantryNames , to a value chosen by the user
 	 * 
-	 * @param newSetOFNames, Names that the  Necrons Units have, they are assigned to assigned to  Necrons Units
+	 * @param newSetOFNames, Names that the  Necrons Units have, they are assigned to Necrons Units
 	 * 
 	 * */
 
@@ -113,7 +108,6 @@ public class NecronsInfantryUnits implements Comparable<NecronsInfantryUnits>   
 	 * 
 	 * */
 	
-
 	public void setOverallScore(int overallScore) {
 
 		this.overallScore = overallScore;
@@ -121,7 +115,9 @@ public class NecronsInfantryUnits implements Comparable<NecronsInfantryUnits>   
 	}
 	
 	/**
-	 * Returns the overallScore that the NecronsUnits have. It is based on the properties that the two classes have: NecronsInfantryAbilities and NecronsInfantryNames
+	 * Returns the overallScore that the NecronsUnits have. 
+	 * It is based on the properties that the two classes have: 
+	 * NecronsInfantryAbilities and NecronsInfantryNames
 	 * 
 	 * @return the overallScore 
 	 * 
@@ -129,7 +125,7 @@ public class NecronsInfantryUnits implements Comparable<NecronsInfantryUnits>   
 
 	public int getOverallScore() 
 	{
-		overallScore = overallScore + newSetOfNames.getNecronWarriorSquad() + newSetOfAbilities.getDimensionalCorridorAbility() + newSetOfAbilities.getNecromedisRepairAbility() + newSetOfNames.getFlayedOnesSquad() +  newSetOfAbilities.getAuraOfFearAbility() + newSetOfAbilities.getNecromedisRepairAbility() + newSetOfNames.getImmortalsSquad() + newSetOfAbilities.getNecromedisRepairAbility()+ newSetOfNames.getWraithSquad() + newSetOfAbilities.getNecromedisRepairAbility();
+		overallScore = newSetOfNames.getNecronWarriorSquad() + newSetOfAbilities.getDimensionalCorridorAbility() + newSetOfAbilities.getNecromedisRepairAbility() + newSetOfNames.getFlayedOnesSquad() +  newSetOfAbilities.getAuraOfFearAbility() + newSetOfAbilities.getNecromedisRepairAbility() + newSetOfNames.getImmortalsSquad() + newSetOfAbilities.getNecromedisRepairAbility()+ newSetOfNames.getWraithSquad() + newSetOfAbilities.getNecromedisRepairAbility();
 
 		return overallScore;
 
@@ -147,6 +143,13 @@ public class NecronsInfantryUnits implements Comparable<NecronsInfantryUnits>   
 		return "NecronsInfantryUnits [newSetOfAbilities=" + newSetOfAbilities + ", newSetOfNames=" + newSetOfNames
 				+ ", overallScore=" + overallScore + "]";
 	}
+	
+	/** CompareToMethod allows the NEcronsInfantry Units to be sorted in an order chosen the user
+	 * 
+	 * @return the value of the units sorted in an order chosen by the user
+	 */
+	
+	
 	
 	@Override
 	public int compareTo(NecronsInfantryUnits other) {

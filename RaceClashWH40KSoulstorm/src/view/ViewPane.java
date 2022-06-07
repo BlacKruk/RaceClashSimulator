@@ -1,6 +1,5 @@
 package view;
 
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,24 +13,18 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import model.DarkEldarRace;
 import model.NecronsRace;
-import model.DarkEldarRace;
-
-
 
 public class ViewPane extends GridPane {
 
 
-
+	private Label darkEldarListViewLabel, necronsListViewLabel, areTheUnitsReady;
 	private ListView<DarkEldarRace> darkEldarListView;
 	private ObservableList<DarkEldarRace> darkEldarRace;
-	private Label darkEldarListViewLabel, necronsListViewLabel, areTheUnitsReady;
-	private Button fightButton;
-
 	private ListView<NecronsRace> necronsListView;
 	private ObservableList<NecronsRace> necronsRace;
+	private Button fightButton;
 
 	public ViewPane() {
 

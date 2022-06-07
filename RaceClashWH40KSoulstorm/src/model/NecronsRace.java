@@ -25,8 +25,7 @@ public class NecronsRace implements Iterable<NecronsInfantryUnits> {
 	/**
 	 * 
 	 * A default constructor which initializes the overallScore field and the generalDescription field
-	 * By default the overallScore field value is set to 0  and the generalDescription field is set to "The Necrons are a mysterious xenos species of humanoid, robotic skeletal warriors that have lain dormant in their stasis-tombs for more than 60 million Terran years, though they have begun to awaken at last. "
-				+ "They are the soulless creations and former servants of the ancient C'tan, the terrible Star Gods of Aeldari myth."
+	 * By default the overallScore field value is set to 0  and the generalDescription field is set to "The Necrons are a mysterious xenos species of humanoid, robotic skeletal warriors that have lain dormant in their stasis-tombs for more than 60 million Terran years, though they have begun to awaken at last."
 	 * 
 	 * @param overallScore the score that the race is going to achieve when launching the apllication
 	 * @param newRaceDescription - a general description of the whole race
@@ -82,8 +81,6 @@ public class NecronsRace implements Iterable<NecronsInfantryUnits> {
 	 * @param overallScore, overallScore of the whole race	 * 
 	 * */
 
-
-
 	public void setOverallScore(int overallScore) {
 		this.overallScore = overallScore;
 	}
@@ -110,7 +107,7 @@ public class NecronsRace implements Iterable<NecronsInfantryUnits> {
 		return newInfantryUnits.get(pos);
 	}
 
-	/** Returns the number of infantryUnits in the playlist.
+	/** Returns the number of infantryUnits in the whole Necron Race
 	 * @return number of infantry units in the whole  Necrons Race. */
 
 	public int size() {
@@ -131,7 +128,7 @@ public class NecronsRace implements Iterable<NecronsInfantryUnits> {
 	}
 
 	/** Gets the total score of the NecronsInfantry units with their abilities
-	 * @return the toatal score that the Necrons units have*/
+	 * @return the total score that the Necrons units have*/
 
 
 	public double getTotalScoreOfInfantryUnitsWithAbilities() {
@@ -174,20 +171,9 @@ public class NecronsRace implements Iterable<NecronsInfantryUnits> {
         return s;       
     }
     
-    
-	/** Returns the number of units for the whole race.
-	 * @return Number of units for the whole race. */
-	public int numberOfUnits() {
-		return newInfantryUnits.size();
-	}
-	
-	/** Clears all entries from the the Necrons Race */
-	public void clearAllUnits() {
-               newInfantryUnits.clear();
-	}
 	
 	/** Shuffles the units for NecronsRace into random order*/
-	public void shufflePlaylist() {
+	public void shuffleUnits() {
 		//The shuffle method is static, which means it can be called
 		//on the Collections class without it being instantiated.
 		Collections.shuffle(newInfantryUnits);
@@ -200,20 +186,23 @@ public class NecronsRace implements Iterable<NecronsInfantryUnits> {
 		return newInfantryUnits.iterator();
 	}
 	
-	public void sortPlaylist() {
+	/** Sort units comparator
+	 * Allows the units to be sorted in naturalOrder
+	 * 
+	 * */
+	
+	public void sortUnits() {
 		//Collections.sort(list); //or same as
 		newInfantryUnits.sort(Comparator.naturalOrder());
 	}
 	
-	public void sortPlaylist(Comparator<NecronsInfantryUnits> comparator) {
+	/** Sort units comparator
+	 * Allows the units to be sorted in naturalOrder
+	 * 
+	 * */
+	
+	public void sortUnits(Comparator<NecronsInfantryUnits> comparator) {
 		 newInfantryUnits.sort(comparator); 
 		}
-
-
-
-
-
-
-
 
 }

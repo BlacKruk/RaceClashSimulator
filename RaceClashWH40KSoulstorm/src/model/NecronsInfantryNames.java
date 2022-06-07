@@ -101,15 +101,6 @@ public class NecronsInfantryNames implements Comparable<NecronsInfantryNames>{
 
 	}
 
-
-	/*
-	@Override
-	public int getOverallScore() {
-
-		return super.getOverallScore() + necronWarriors + flayedOnes + Immortals + Wraiths;
-	}
-	 */
-
 	//set methods
 
 	/**
@@ -179,6 +170,12 @@ public class NecronsInfantryNames implements Comparable<NecronsInfantryNames>{
 				+ Immortals + ", Wraiths=" + Wraiths + "]";
 	}
 	
+	/**
+	 * Compare Method
+	 * Allows the NEcronInfantryNames to be sorted using a avlue chosen by the user
+	 * 
+	 * @return result, the value of the units sorted in an order chosen by the user
+	 * */
 	
 	@Override
 	public int compareTo(NecronsInfantryNames other) {

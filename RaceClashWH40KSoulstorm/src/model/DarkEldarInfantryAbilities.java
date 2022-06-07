@@ -47,13 +47,14 @@ public class DarkEldarInfantryAbilities implements Comparable<DarkEldarInfantryA
 	}
 
 	//get and set methods
-
+	
+	
 	/**
-	 * Returns the combatDrugs ability that the DarkEldarUnits have. It can only be assigned to a witchSquad	 * 
-	 * @return combatDrugs
+	 * Sets the combatDrugs value to 10
+	 * 
+	 * @param combatDrugs, sets the combat drugs value to 10
 	 * 
 	 * */
-
 	public void assignCombatDrugsAbility() {
 
 
@@ -61,81 +62,90 @@ public class DarkEldarInfantryAbilities implements Comparable<DarkEldarInfantryA
 
 	}
 
+	
+
 	/**
-	 * Returns the infiltration ability that the DarkEldarUnits have. It can only be assigned to a mandrakeSquad	 * 
-	 * @return infiltration
+	 * Sets the infiltration value to 10
+	 * 
+	 * @param combatDrugs, sets the infiltration value to 10
 	 * 
 	 * */
-
 	public void assignInfiltrationAbility() {
 
 		this.infiltration = 10;
 	}
-
+	
+	
 	/**
-	 * Returns the jump ability that the DarkEldarUnits have. It can only be assigned to a scourgeSquad	* 
-	 * @return jump
+	 * Sets the jump value to 10
+	 * 
+	 * @param jump, sets the infiltration value to 10
 	 * 
 	 * */
-
 	public void assignJumpAbility() {
 
 		this.jump = 10;
 
 
 	}
-
+	
 	/**
-	 * Returns the specialMoraleBrokenEffect ability that the DarkEldarUnits have. It can only be assigned to a mandrakeSqua* 
-	 * @return specialMoraleBrokenEffect
+	 * Sets the specialMoraleBrokenEffect value to 10
+	 * 
+	 * @param specialMoraleBrokenEffect, sets the specialMoraleBrokenEffect value to 10
 	 * 
 	 * */
-
-
 	public void assignSpecialMoraleBrokenEffectAbility() {
 
 		this.specialMoraleBrokenEffect = 10;
 	}
 
-
+	
+	/**
+	 * Returns the combatDrugs ability that the DarkEldarUnits have. It can only be assigned to a witchSquad	 * 
+	 * @return combatDrugs
+	 * 
+	 * */
 	public int getCombatDrugsAbility() {
 
 		return combatDrugs;
 	}
-
+	
+	/**
+	 * Returns the infiltration ability that the DarkEldarUnits have. It can only be assigned to a mandrakeSquad	 * 
+	 * @return infiltration
+	 * 
+	 * */
 	public int getInfiltrationAbility() {
 
 		return infiltration;
 	}
 	
+	/**
+	 * Returns the jump ability that the DarkEldarUnits have. It can only be assigned to a scourgeSquad	* 
+	 * @return jump
+	 * 
+	 * */
 	public int getJumpAbility() {
 
 		return jump;
 	}
 	
+	/**
+	 * Returns the specialMoraleBrokenEffect ability that the DarkEldarUnits have. It can only be assigned to a mandrakeSqua* 
+	 * @return specialMoraleBrokenEffect
+	 * 
+	 * */
 	public int getSpecialMoraleBrokenEffectAbility() {
 
 		return specialMoraleBrokenEffect;
 	}
-
-
-	/*
-	@Override
-	public int getOverallScore() {
-
-
-		return  (super.getMandrakeSquad() + infiltration) + (super.getScourgeSquad() + jump) + (super.getWarpBeastPack() - specialMoraleBrokenEffect) + super.getWarriorSquad() + super.getWychSquad() + combatDrugs;
-	}
-	 */
 
 	/**
 	 * Returns a textual representation of the whole class 
 	 * @return a  textual representaion
 	 * 
 	 * */
-
-
-
 	@Override
 	public String toString() {
 		return super.toString() + "DarkEldarInfantryAbilities:[combatDrugs=" + combatDrugs + ", infiltration=" + infiltration + ", jump="

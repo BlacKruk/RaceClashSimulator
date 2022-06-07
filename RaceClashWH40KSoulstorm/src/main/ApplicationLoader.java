@@ -4,8 +4,10 @@ package main;
 import controller.RaceSkirmishController;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.GameEngine;
+import view.OverviewResultsPane;
 import view.RaceClashRootPane;
 
 
@@ -26,7 +28,7 @@ public class ApplicationLoader extends Application {
 	public void start(Stage stage) throws Exception {
 		stage.setMinWidth(510);
 		stage.setMinHeight(260);
-		stage.setTitle("Journey Planner MVC2");
+		stage.setTitle("Race Skirmish App");
 		stage.setScene(new Scene(view));
 		stage.show();
 	}

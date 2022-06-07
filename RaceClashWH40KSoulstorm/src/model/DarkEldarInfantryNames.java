@@ -32,8 +32,8 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	 * @param mandrakeSuad - a mandrake squad, one of DarkEldarInfantryUnits
 	 * @param warriorSquad - a warrior squad, one of DarkEldarInfantryUnits
 	 * @param scourgeSquad - a scourge squad, one of DarkEldarInfantryUnits
-	 * @param  wychSquad   - a wych squad,one of DarkEldarInfantryUnits
-	 * @param warpBeastPack - a warpBeastPack squad,one of DarkEldarInfantryUnits
+	 * @param  wychSquad   - a wych squad, one of DarkEldarInfantryUnits
+	 * @param warpBeastPack - a warpBeastPack squad, one of DarkEldarInfantryUnits
 	 * */
 
 
@@ -56,7 +56,6 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	 * @return mandrakeSquad, how many mandrakes squad does the player have
 	 * 
 	 * */
-	
 	public int getMandrakeSquad() {
 
 		return mandrakeSquad;
@@ -69,7 +68,7 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	 * @return mandrakeSquad, how many warrior squads does the player have
 	 * 
 	 * */
-
+	
 	public int getWarriorSquad() {
 
 		return warriorSquad;
@@ -79,10 +78,10 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	/**
 	 * Returns a scourgeSquad
 	 * 
-	 * @return scourgeSquad, how many scourge Squads  does the player have
+	 * @return scourgeSquad, how many scourgeSquads  does the player have
 	 * 
 	 * */
-
+	
 	public int getScourgeSquad() {
 
 		return scourgeSquad;
@@ -95,7 +94,7 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	 * @return wychSquads, how many wychSquads  does the player have
 	 * 
 	 * */
-
+	
 	public int getWychSquad() {
 
 		return wychSquad;
@@ -121,7 +120,7 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	/**
 	 * Sets the amount MandrakeSquads , to a value chosen by the user
 	 * 
-	 * @param mandrakeSquad, the amount of mandrake squads to be assigned to the "mandrakeSquad" field
+	 * @param mandrakeSquad, the amount of mandrakeSquads to be assigned to the "mandrakeSquad" field
 	 * 
 	 * */
 	
@@ -134,7 +133,7 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	/**
 	 * Sets the amount WarriorSquads , to a value chosen by the user
 	 * 
-	 * @param WarriorSquad, the amount of mandrake squads to be assigned to the "mandrakeSquad" field
+	 * @param WarriorSquad, the amount of warriorSquads to be assigned to the "warriorSquad" field
 	 * 
 	 * */
 
@@ -148,7 +147,7 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 	/**
 	 * Sets the amount ScourgeSquads , to a value chosen by the user
 	 * 
-	 * @param scourgeSquads, the amount of mandrake squads to be assigned to the "mandrakeSquad" field
+	 * @param scourgeSquads, the amount of Scourgesquads to be assigned to the "scourgeSquad" field
 	 * 
 	 * */
 
@@ -200,6 +199,12 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 				+ "]";
 	}
 	
+	/** Compare Method.
+	 * Allows the player to compare chosen units
+	 * 
+	 * @return units sorted in the order by the user
+	 */
+	
 	
 	@Override
 	public int compareTo(DarkEldarInfantryNames other) {
@@ -224,18 +229,5 @@ public class DarkEldarInfantryNames implements Comparable<DarkEldarInfantryNames
 
 		return result;
 	}
-
-	
-
-
-
-
-
-
-
-
-
-
-
 
 }

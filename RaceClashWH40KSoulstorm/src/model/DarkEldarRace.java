@@ -14,7 +14,7 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
 
 	/** A  DarkEldar class represents the overall score and a general description of a WH40k race called  DarkEldar. 
 	 * The overall score can be calculated to give a representation of what is the strength of the race..
-	 * General description can be outputted in the terminal to give an overview of the strengths and weeknesses that the race has.
+	 * General description can be outputted in the terminal to give an overview of the strengths and weaknesses that the race has.
 	 * @author MateuszWos */
 
 	//fields
@@ -81,9 +81,7 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
 	 * 
 	 * @param overallScore, overallScore of the whole race	 * 
 	 * */
-
-
-
+	
 	public void setOverallScore(int overallScore) {
 		this.overallScore = overallScore;
 	}
@@ -95,7 +93,7 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
 		newInfantryUnits.add(e);
 	}
 
-	/** Removes the song at index pos from the whole DarkEldar race.
+	/** Removes the infantryUnits at index pos from the whole DarkEldar race.
 	 * @param pos The index of the DarkEldarInfantryUnits to be removed.*/
 
 	public DarkEldarInfantryUnits removeDarkEldarInfantryUnits(int pos) {
@@ -110,7 +108,7 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
 		return newInfantryUnits.get(pos);
 	}
 
-	/** Returns the number of infantryUnits in the playlist.
+	/** Returns the number of infantryUnits in the in the "DarkEldarInfantryUnits" ArrayList
 	 * @return number of infantry units in the whole  DarkEldar Race. */
 
 	public int size() {
@@ -131,8 +129,7 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
 	}
 
 	/** Gets the total score of the DarkEldarInfantry units with their abilities
-	 * @return the toatal score that the DarkEldar units have*/
-
+	 * @return the total score that the DarkEldar units have*/
 
 	public double getTotalScoreOfInfantryUnitsWithAbilities() {
 		//using for-each loop
@@ -163,8 +160,8 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
 				+ ", newInfantryUnits=" + newInfantryUnits + "]";
 	}
 	
-	 /**Returns a string containing the track listings in numbered order
-     * @return The track listings in numbered order. */
+	 /**Returns a string containing the units in numbered order
+     * @return The units in numbered order. */
     public String getAllOfTheUnits() {
     	String s = "";
         
@@ -174,17 +171,6 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
         return s;       
     }
     
-    
-	/** Returns the number of units for the whole race.
-	 * @return Number of units for the whole race. */
-	public int numberOfUnits() {
-		return newInfantryUnits.size();
-	}
-	
-	/** Clears all entries from the the DarkEldar Race */
-	public void clearAllUnits() {
-               newInfantryUnits.clear();
-	}
 	
 	/** Shuffles the units for DarkEldarRace into random order*/
 	public void shuffleUnits() {
@@ -200,20 +186,18 @@ public class DarkEldarRace implements Iterable<DarkEldarInfantryUnits> {
 		return newInfantryUnits.iterator();
 	}
 	
-	public void sortPlaylist() {
+	/**List comparator, allows the units to be sorted in naturalOrder
+	 * */
+	
+	public void sortUnits() {
 		//Collections.sort(list); //or same as
 		newInfantryUnits.sort(Comparator.naturalOrder());
 	}
 	
-	public void sortPlaylist(Comparator<DarkEldarInfantryUnits> comparator) {
+	/**List comparator, allows the units to be sorted, with the use of a comparator chosen by the user
+	 * */
+	
+	public void sortUnits(Comparator<DarkEldarInfantryUnits> comparator) {
 		 newInfantryUnits.sort(comparator); 
 		}
-
-
-
-
-
-
-
-
 }

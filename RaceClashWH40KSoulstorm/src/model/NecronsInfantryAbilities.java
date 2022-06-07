@@ -15,23 +15,19 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 	//default constructor
 
 	/** Creates a new instance of NecronsInfantryNames,using default dimensionalCorridor, auraOfFear, necrodermisRepair values. 
-	 * The default values of each of the fields mentioned above are equal to 10 */
+	 * The default values of each of the fields mentioned above are equal to 0 */
 	public NecronsInfantryAbilities () {
-
 
 		dimensionalCorridor = 0;
 		auraOfFear = 0;
 		necrodermisRepair = 0;
-
-
-
 	}
 
 	/** Creates a new instance of DarkEldarInfantryNames, with the given values. 
 	 * 
-	 * @param dimensionalCorridor - additional ability, can only be assigned to a Neccron Warrior squad
+	 * @param dimensionalCorridor - additional ability, can only be assigned to a NeccronWarriorSquad
 	 * @param auraOfFear - additional ability, can only be assigned to a flayedOnesSquad
-	 * @param necromedisRepair -additional ability, can only be assigned to Neccron Warrior Squad, flayedOnes Squad, Wraith Squad and Immortals Squad
+	 * @param necromedisRepair -additional ability, can only be assigned to NeccronWarriorSquad, flayedOnesSquad, WraithSquad and ImmortalsSquad
 	 * */
 
 	//custom constructor
@@ -48,8 +44,9 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 	//get and set methods
 
 	/**
-	 * Returns the dimensionalCorridor ability that the NecronsUnits have. It can only be assigned to a NecronWarrior squad	 * 
-	 * @return dimensionalCorridor
+	 * Sets the dimensionalCorrridor value to 10
+	 * 
+	 * @param dimensionalCorridor, sets the dimensionalCorridor value to 10
 	 * 
 	 * */
 
@@ -62,8 +59,9 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 
 
 	/**
-	 * Returns the auraOfFear ability that the NecronsUnits have. It can only be assigned to a flayedOnes squad	 * 
-	 * @return auraOfFear
+	 * Sets the auraOfFear value to 10
+	 * 
+	 * @param auraOfFear, sets the auraOfFear value to 10
 	 * 
 	 * */
 
@@ -72,12 +70,14 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 		this.auraOfFear = 10;
 	}
 
+	
 	/**
-	 * Returns the NecrodermisRepair ability that the NecronsUnits have. It can be assigned to all four of the squads* 
-	 * @return NecrodermisRepairAbility
+	 * Sets the necrodermisRepair value to 10
+	 * 
+	 * @param necrodermisRepair, sets the infiltration necromerdisRepairValue to 10
 	 * 
 	 * */
-
+	
 	public void assignNecrodermisRepairAbility() {
 
 		this.necrodermisRepair = 10;
@@ -85,11 +85,23 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 
 	}
 	
+	/**
+	 * Returns the Dimensional Corridor ability that the NecronsUnits have. It can only be assigned to NecronWarriors squad 
+	 * @return dimensionalCorridor the value assigned to dimensionalCorridorAbility
+	 * 
+	 * */
+	
 	public int getDimensionalCorridorAbility()
 	{
 	
 		return dimensionalCorridor;
 	}
+	
+	/**
+	 * Returns the AuraOfFear ability that the NecronsUnits have. It can only be assigned to flayedOnes squad
+	 * @return auraOfFear, the value assigned to auraOfFear parameter
+	 * 
+	 * */
 	
 	public int getAuraOfFearAbility()
 	{
@@ -97,6 +109,12 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 		return auraOfFear;
 	}
 	
+	/**
+	 * Returns the NecrodermisRepair ability that the NecronsUnits have. It can be assigned to all four of the squads* 
+	 * @return NecrodermisRepairAbility
+	 * 
+	 * */
+
 	public int getNecromedisRepairAbility()
 	{
 	
@@ -114,18 +132,12 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 		return "NecronsInfantryAbilities [dimensionalCorridor=" + dimensionalCorridor + ", auraOfFear=" + auraOfFear
 				+ ", necrodermisRepair=" + necrodermisRepair + "]";
 	}
-
-
-
-	/*
-	@Override
-	public int getOverallScore() {
-
-
-		return  super.getNecronWarriorSquad() + necrodermisRepair + dimensionalCorridor + super.getFlayedOnesSquad() + auraOfFear + necrodermisRepair + super.getImmortalsSquad() + necrodermisRepair + super.getWraithSquad() + necrodermisRepair ;
-	}
-	 */
 	
+	/**
+	 *Compare method
+	 * @return allows the abilities to be sorted in an order chosen by the user
+	 * 
+	 * */
 	
 	@Override
 	public int compareTo(NecronsInfantryAbilities other) {
@@ -135,9 +147,7 @@ public class NecronsInfantryAbilities implements Comparable<NecronsInfantryAbili
 			result = Integer.compare(this.dimensionalCorridor, other.dimensionalCorridor);
 
 			if (result == 0) {
-				result = Integer.compare(this.necrodermisRepair, other.necrodermisRepair);
-				
-				
+				result = Integer.compare(this.necrodermisRepair, other.necrodermisRepair);	
 			}
 		}
 

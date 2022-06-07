@@ -1,23 +1,15 @@
 package view;
 
 import java.util.ArrayList;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import model.DarkEldarInfantryAbilities;
-import model.DarkEldarInfantryNames;
-import model.GameEngine;
 import model.NecronsInfantryAbilities;
 import model.NecronsInfantryNames;
 import model.NecronsInfantryUnits;
@@ -47,31 +39,38 @@ public class NecronsRacePane extends GridPane {
 		this.setAlignment(Pos.CENTER);
 
 
+		//set up the necronsInfantry label as well as textField
 		necronsInfantryLbl = new Label("NECRONS INFANTRY");
 
 
+		//set up the necronWarriors label as well as textField
 		necronWarriorsSquadLbl = new Label("Necron Warriors");
 		necronWarriorsTxt = new TextField();
 
-		dimensionalCorridor = new CheckBox("Special Ability: Dimensional Corridor");
-		necrodermisRepair = new CheckBox("Special Ability: NecrodermisRepair");
-
-
+		//set up the flayedOnes label as well as textField
 		flayedOnesSquadLbl = new Label("Flayed Ones Squads");
 		flayedOnesTxt = new TextField();
 
-		auraOfFear = new CheckBox("Special Ability: Aura Of Fear");
-
-		necronsInfantryAbilities = new Label("Necrons Infantry Abilities");
-
+		//set up the immortals label as well as textField
 		ImmortalsLbl = new Label("Immortals Squads");
 		immortalsTxt = new TextField();
 
-		WraithsLbl = new Label("Wych Squads");
+		//set up the wraiths label as well as textField
+		WraithsLbl = new Label("Wraiths Squads");
 		wraithsTxt = new TextField();
-
+		
+		
+        //submit button to submit all of the above
 		submitBtn = new Button("Submit");
 
+		//set up the checkboxes for the special abilities
+		necronsInfantryAbilities = new Label("NECRONS INFANTRY ABILITIES");
+		dimensionalCorridor = new CheckBox("Dimensional Corridor");
+		necrodermisRepair = new CheckBox("NecrodermisRepair");
+		auraOfFear = new CheckBox("Aura Of Fear");
+
+		
+		
 		this.add(necronsInfantryLbl, 0, 0);
 
 		this.add(necronWarriorsSquadLbl, 0, 1);
@@ -96,8 +95,6 @@ public class NecronsRacePane extends GridPane {
 
 		this.add(submitBtn, 0, 7);
 
-
-
 	}
 
 	//returns a name object based on the input fields
@@ -114,69 +111,36 @@ public class NecronsRacePane extends GridPane {
 		String wraithsString = wraithsTxt.getText();
 		int wraiths   = Integer.parseInt(wraithsString);
 
-		
-        NecronsInfantryAbilities abilities = new NecronsInfantryAbilities();
-		
+
+		NecronsInfantryAbilities abilities = new NecronsInfantryAbilities();
+
 		if(dimensionalCorridor.isSelected() == true) {abilities.assignDimensionalCorridorAbility();;};
 		if(auraOfFear.isSelected() == true) {abilities.assignAuraOfFearAbility();;};
 		if(necrodermisRepair.isSelected() == true) {abilities.assignNecrodermisRepairAbility();;};
-		
+
 		NecronsInfantryUnits units = new NecronsInfantryUnits(abilities, new NecronsInfantryNames(necronWarriors, flayedOnes,immortals,wraiths),0);
 		NecronsRaceDescription description = new NecronsRaceDescription();
 		ArrayList<NecronsInfantryUnits> arrayList = new ArrayList<NecronsInfantryUnits>();
 		arrayList.add(units);
-		
-		
-		NecronsRace newRace = new NecronsRace(0,description,arrayList);
 
-		return new NecronsRace(newRace.getTotalScoreOfInfantryUnitsWithAbilities(),description,arrayList);
-
-
-
+		return new NecronsRace(units.getOverallScore(),description,arrayList);
 	}
 	
-	
-	//returns a name object based on the input fields
-		public String getOverallScore() {
-			String necronWarriorsString =  necronWarriorsTxt.getText();
-			int necronWarriors = Integer.parseInt(necronWarriorsString);
+	public void clear() {
+		necronWarriorsTxt.setText("");
+		flayedOnesTxt.setText("");
+		wraithsTxt.setText("");
+		immortalsTxt.setText("");
+		necrodermisRepair.setSelected(false);
+		dimensionalCorridor.setSelected(false);
+		auraOfFear.setSelected(false);
 
-			String flayedOnesString = flayedOnesTxt.getText();
-			int flayedOnes = Integer.parseInt(flayedOnesString);
-
-			String immortalsString = immortalsTxt.getText();
-			int immortals = Integer.parseInt(immortalsString);
-
-			String wraithsString = wraithsTxt.getText();
-			int wraiths   = Integer.parseInt(wraithsString);
-
-			
-	        NecronsInfantryAbilities abilities = new NecronsInfantryAbilities();
-			
-			if(dimensionalCorridor.isSelected() == true) {abilities.assignDimensionalCorridorAbility();;};
-			if(auraOfFear.isSelected() == true) {abilities.assignAuraOfFearAbility();;};
-			if(necrodermisRepair.isSelected() == true) {abilities.assignNecrodermisRepairAbility();;};
-			
-			NecronsInfantryUnits units = new NecronsInfantryUnits(abilities, new NecronsInfantryNames(necronWarriors, flayedOnes,immortals,wraiths),0);
-			NecronsRaceDescription description = new NecronsRaceDescription();
-			ArrayList<NecronsInfantryUnits> arrayList = new ArrayList<NecronsInfantryUnits>();
-			arrayList.add(units);
-			
-			
-			NecronsRace newRace = new NecronsRace(0,description,arrayList);
-
-			
-			String newString = String.valueOf(newRace.getTotalScoreOfInfantryUnitsWithAbilities());
-			return newString;
+	}
 
 
-		}
 
 	public void addNecronsRaceHandler(EventHandler<ActionEvent> handler) {
 		submitBtn.setOnAction(handler);
 	}
-
-
-
 
 }

@@ -118,7 +118,7 @@ public class DarkEldarInfantryUnits implements Comparable<DarkEldarInfantryUnits
 	
 	public int getOverallScore() 
 	{
-	 overallScore = overallScore + newSetOfNames.getMandrakeSquad() + newSetOfAbilities.getInfiltrationAbility() + newSetOfNames.getScourgeSquad() +  newSetOfAbilities.getJumpAbility() + newSetOfNames.getWarpBeastPack() + newSetOfAbilities.getSpecialMoraleBrokenEffectAbility()  + newSetOfNames.getWychSquad() + newSetOfAbilities.getCombatDrugsAbility() + newSetOfNames.getWarriorSquad();
+	 overallScore =  newSetOfNames.getMandrakeSquad() + newSetOfAbilities.getInfiltrationAbility() + newSetOfNames.getScourgeSquad() +  newSetOfAbilities.getJumpAbility() + newSetOfNames.getWarpBeastPack() + newSetOfAbilities.getSpecialMoraleBrokenEffectAbility()  + newSetOfNames.getWychSquad() + newSetOfAbilities.getCombatDrugsAbility() + newSetOfNames.getWarriorSquad();
 	 
 	 return overallScore;
 	 
@@ -138,6 +138,11 @@ public class DarkEldarInfantryUnits implements Comparable<DarkEldarInfantryUnits
 				+ ", overallScore=" + overallScore + "]";
 	}
 	
+	/** Compare Method.
+	 * Allows the player to compare chosen units
+	 * 
+	 * @return units sorted in the order by the user
+	 */
 	
 	@Override
 	public int compareTo(DarkEldarInfantryUnits other) {
